@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Sat 7 Nov 2026</span><span class="sep"></span><span>4 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/how-to-spot-a-scam-text-message.webp" alt="Illustration of a shield with a padlock blocking scam message bubbles from a phone and laptop" loading="lazy"><figcaption>Illustration: urgency is the scammer&#39;s whole trick — slow down and it falls apart.</figcaption></figure>
 <p>Scam texts work because they arrive when you&#39;re busy and they&#39;re engineered to make you act before you think. The good news: nearly all of them share the same five tells, and you can scan for them in seconds. Once you know how to spot a scam text message, the panic these texts are designed to cause mostly evaporates — what is left is a calm ten-second check.</p><h2>The 5 tells</h2><ol><li><b>Urgency.</b> “Your account will be suspended in 2 hours.” “Final notice.” Pressure is the product — a scammer needs you panicking, because a calm person checks. Genuine organisations give you days or weeks, through more than one channel.</li><li><b>A link that almost looks right.</b> Hover or long-press the link (don't tap through) and read the actual address. “secure-bank-login.example.com” is not your bank. Real companies use their one real domain, always.</li><li><b>An unexpected request for money or codes.</b> A delivery fee of a suspiciously small amount, a “verification code” you're asked to share, a payment to release a parcel. No legitimate company asks for a login code by text — ever. The person asking for the code IS the person the code is meant to stop.</li><li><b>It could be sent to anyone.</b> “Dear customer, your parcel…” — no name, no order number, no detail only the real company would know. Mass scams are generic because they're sent to millions.</li><li><b>A weird sender.</b> A bank text arriving from a random mobile number, or a delivery notice for a parcel you never ordered. Check your memory before the message: were you actually expecting anything?</li></ol><h2>Three real examples, decoded</h2><ol><li><b>“Your parcel could not be delivered. Pay the £1.45 redelivery fee here: [link]”</b> — No company name, no tracking number, and a fee so small it feels harmless. The fee is not the point; your card details are. Real couriers leave a card through the door and never collect redelivery fees through a text link.</li><li><b>“Hi Mum, my phone is broken. This is my new number — I need money for a bill urgently.”</b> — No name, instant urgency, and a payment request. Before sending anything, call the old number: it almost always rings, because your child never sent this. Agree a family code word for genuine emergencies and this scam dies on the spot.</li><li><b>“Your bank account has been locked. Verify your details within 2 hours to avoid closure.”</b> — Banks do not lock accounts by text with a countdown clock. Open your banking app directly: if there is no alert inside it, there is no problem. The link in the text leads to a look-alike page built to harvest your login.</li></ol><h2>How to spot a scam text message: the 10-second routine</h2><p>When a worrying text lands: stop, don&#39;t tap the link, and ask two questions — was I expecting this, and does it want me to hurry? Then verify independently: open the company&#39;s official app or type its real website address yourself, or call the number printed on your bank card. If the message was real, the same problem will be visible there. If it isn&#39;t — and it usually isn&#39;t — delete the text and, on most phones, report it as spam. That one habit defeats essentially every text scam in circulation.</p><h2>If you already tapped — or worse, paid</h2><p>Do not panic, and do not be embarrassed: these messages are engineered by professionals, and speed now matters far more than pride. If you entered card details on the fake page, call your bank on the number printed on the card itself and ask them to block the card — banks handle this every day. If you entered a password anywhere, change it from the official app and turn on two-step verification while you are there. If money has already left your account, report it immediately; fast reports recover money far more often than slow ones. Then block the number, and on many networks you can forward the original scam text to 7726, which helps carriers shut the sender down for everyone else too.</p><div class="takeaways"><h2>The short version</h2><ul><li>Real banks and delivery companies never ask you to pay or log in through a text-message link.</li><li>Every scam text creates fake urgency — “within 2 hours”, “final warning”. Real problems don&#39;t expire in 2 hours.</li><li>When in doubt, ignore the message entirely and open the official app or website yourself.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/free-up-phone-storage.webp" alt="Illustration of photos floating from a smartphone up into a cloud, with lots of free space below" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Phones</span><h3>How to free up phone storage without deleting a single photo</h3><p>Fri 6 Nov 2026 · 5 min read</p></div><a class="btn btn-amber" href="/free-up-phone-storage/">Read next</a></div>
 <section class="more-cat"><h2>More in Security</h2><ul class="more-list"><li><a href="/how-to-spot-a-phishing-email/"><span>14 Nov 2026</span>How to spot a phishing email: 8 red flags before you click</a></li><li><a href="/stop-apps-tracking-you/"><span>12 Nov 2026</span>How to stop apps tracking you on your phone: the privacy settings to change today</a></li><li><a href="/public-wifi/"><span>11 Nov 2026</span>Is public Wi-Fi safe? 7 rules for coffee-shop and airport Wi-Fi</a></li><li><a href="/phone-hacked/"><span>10 Nov 2026</span>How to tell if your phone has been hacked: 9 warning signs and what to do next</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/where-to-place-wifi-router/">← Newer: Where to place Wi-Fi router at home for faster Wi-Fi in every room</a><a href="/free-up-phone-storage/">Older: How to free up phone storage without deleting a single photo →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>

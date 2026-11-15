@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Fri 6 Nov 2026</span><span class="sep"></span><span>5 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/free-up-phone-storage.webp" alt="Illustration of photos floating from a smartphone up into a cloud, with lots of free space below" loading="lazy"><figcaption>Illustration: move photos to the cloud, keep them on the phone — just smaller.</figcaption></figure>
 <p>The “Storage Almost Full” warning sends most people straight to their photo library, deleting memories one by one for a miserable few hundred megabytes. Stop. On most phones, photos aren&#39;t even the main offender — and even when they are, you can free the space without deleting a single one. That is exactly what this guide does: free up phone storage step by step, starting with the biggest wins first, so you can stop wherever you have reclaimed enough.</p><h2>Step 1: see what&#39;s actually eating the space</h2><p>Android: Settings → Storage. iPhone: Settings → General → iPhone Storage. Both show a breakdown by category and a list of your biggest apps. Read it before deleting anything — the top item is often a surprise: a podcast app with 4 GB of downloads, a game, or a messaging app holding years of videos.</p><h2>Step 2: tame the messaging apps (the usual winner)</h2><p>WhatsApp alone commonly holds 3–10 GB of forwarded videos, voice notes and images. In WhatsApp: Settings → Storage and data → Manage storage. It lists your biggest chats and files over 5 MB — clear the forwarded-video piles from group chats and you&#39;ll likely recover more than everything else on this page combined. Telegram users: Settings → Data and Storage → Storage Usage, and set the cache limit low.</p><h2>Step 3: clear caches (Android) and offload apps (iPhone)</h2><p>On Android, open Settings → Apps, pick your biggest apps, and tap Storage → Clear cache. Browsers, social apps and music apps rebuild caches of several gigabytes; clearing them loses nothing but a slightly slower first load. On iPhone, enable “Offload Unused Apps” in iPhone Storage — it removes apps you haven&#39;t opened in months while keeping their data and icons, so they restore in one tap when needed.</p><h2>Step 4: keep every photo, lose the weight</h2><p>This is the move that solves it permanently. Turn on cloud photo backup — Google Photos or iCloud Photos — then enable the space-saving option (“Free up space” in Google Photos; “Optimise iPhone Storage” in iCloud settings). Every photo stays in your library, viewable instantly, but the phone keeps only a light preview and the full-size original lives in the cloud. On a photo-heavy phone this routinely frees 10–30 GB while deleting literally nothing. Just make sure the backup has finished on Wi-Fi before you hit the free-up-space button.</p><h2>Step 5: free up phone storage in the forgotten corners</h2><p>Downloads folders, Netflix/YouTube offline downloads you watched months ago, voice-memo hoards, and duplicate burst photos all count. iPhone Storage and Android&#39;s Files app both surface “review large files” and unused downloads — ten minutes there usually finds another gigabyte or two.</p><h2>Step 6: stop it filling straight back up</h2><p>Freeing space once is a chore; a few defaults stop the refill. In WhatsApp and Telegram, turn off automatic media downloads on mobile data — group-chat videos are the number-one silent filler of phone storage worldwide. In YouTube, Spotify and Netflix, lower the download quality or clear finished series monthly, because offline downloads default to keeping everything forever. Set your camera to the space-saving format (iPhone: Settings → Camera → Formats → High Efficiency; Android: look for HEIF or high-efficiency in the camera settings) and new photos will take roughly half the space at the same visible quality. Finally, put a two-minute storage check in your calendar once a month — small, regular clean-ups beat one annual panic every time.</p><h2>How much space should you actually keep free?</h2><p>Aim to keep at least 10–15% of your storage empty. Phones use that breathing room for system updates, caches and photo processing — which is why a completely full phone also becomes a slow, glitchy phone, and why big updates so often fail exactly when you need them. On a 128 GB phone, treat the last 15 GB as not really yours. If you are still chronically at the limit after every step above, that is the one honest signal that your next phone should have double the storage: it is the cheapest upgrade on the spec sheet, and the one people regret skipping most.</p><div class="takeaways"><h2>The short version</h2><ul><li>Check Settings → Storage first: the biggest category is usually apps and caches, not photos.</li><li>WhatsApp and Telegram media silently grows to several gigabytes — the fix takes one minute.</li><li>Cloud photo optimisation keeps every photo visible while removing the full-size copies from the phone.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/keyboard-shortcuts-to-save-time.webp" alt="Illustration of a keyboard from above with a few keys highlighted and lightning bolts around it" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Productivity</span><h3>20 keyboard shortcuts to save time — and an hour a week</h3><p>Thu 5 Nov 2026 · 6 min read</p></div><a class="btn btn-amber" href="/keyboard-shortcuts-to-save-time/">Read next</a></div>
 <section class="more-cat"><h2>More in Phones</h2><ul class="more-list"><li><a href="/how-to-find-a-lost-phone/"><span>15 Nov 2026</span>How to find a lost phone: Android and iPhone, step by step</a></li><li><a href="/new-phones-november-2026/"><span>13 Nov 2026</span>New phones launching in November 2026: should you buy now or wait?</a></li><li><a href="/why-phone-overheating/"><span>13 Nov 2026</span>Why is my phone overheating? 9 causes and the quick fixes that actually work</a></li><li><a href="/android-speed/"><span>10 Nov 2026</span>How to speed up an Android phone: 11 fixes that actually work</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/how-to-spot-a-scam-text-message/">← Newer: How to spot a scam text message in 10 seconds: the 5 tells</a><a href="/keyboard-shortcuts-to-save-time/">Older: 20 keyboard shortcuts to save time — and an hour a week →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>

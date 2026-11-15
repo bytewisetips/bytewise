@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Mon 2 Nov 2026</span><span class="sep"></span><span>5 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/what-are-passkeys.webp" alt="Illustration of a smartphone using a fingerprint to unlock a glowing digital key, with an old password key fading away" loading="lazy"><figcaption>Illustration: your fingerprint or face becomes the key — there&#39;s nothing to type, forget or steal.</figcaption></figure>
 <p>Every few weeks another big service suggests you “create a passkey”, and most people tap “Not now” — understandably, since nobody explains what it is in plain words. So, plainly: a passkey is a way to prove a website really is dealing with you, without a password at all. If you have ever wondered “what are passkeys?” and whether they are worth bothering with, the next two minutes will settle it.</p><h2>What are passkeys? How they work, in one paragraph</h2><p>When you create a passkey, your phone creates a pair of matching digital keys. One half stays locked on your device (and synced privately in your Google or Apple account); the other half stays with the website. Signing in means the two halves check each other — and you approve it with your fingerprint, face, or phone PIN. There&#39;s no password to type, remember, reuse, or have stolen in a data breach.</p><h2>Why it&#39;s stronger than any password</h2><ol><li><b>It can't be phished.</b> A passkey only works on the exact website it was created for. A fake look-alike login page — the trick behind most account theft — gets nothing, because your phone simply won't offer the passkey there.</li><li><b>It can't leak in a breach.</b> The website only holds its half of the key, which is useless to thieves on its own.</li><li><b>It's unique by default.</b> Every site gets its own key — no “one password for everything” problem, because there's no password.</li></ol><h2>Where you&#39;ll meet them, and what to do</h2><p>Google, Apple, Microsoft, Amazon, WhatsApp, PayPal and many banks now offer passkeys. Next time one offers: accept. The setup takes under a minute — confirm with your fingerprint or face, done. After that, signing in on that site is just a glance or a touch. Your passkeys travel with you through your Google Password Manager or iCloud Keychain, so a new phone signs you in rather than locking you out. Older devices and a few services still fall back to passwords, so keep your password manager for those — but every account you move to a passkey is one that can essentially never be stolen by a trick text or email.</p><h2>Passkeys vs passwords vs verification codes</h2><p>It helps to see the three side by side. A password is something you know — which means it can be guessed, reused, forgotten, or tricked out of you by a convincing fake page. Two-step verification adds a code sent to your phone: much stronger, but the code can still be phished in real time, and typing six digits is nobody’s favourite hobby. A passkey is something you have — your device — unlocked by something you are, your face or fingerprint, and the check only ever happens with the genuine website. That is why passkeys are both the strongest and the laziest option: less to type, less to remember, and the trick that defeats the other two simply does not work on them.</p><h2>Common worries, answered honestly</h2><ol><li><b>“What if I lose my phone?”</b> Your passkeys sync through your Google or Apple account, so signing in on your new phone brings them back — the same way your photos come back. Nothing important lives only on the lost device.</li><li><b>“What if my fingerprint stops working?”</b> Your phone PIN or password always works as the fallback, exactly as it does when you unlock the phone today.</li><li><b>“Can I still use my old password?”</b> On most services, yes — passkeys and passwords usually exist side by side during the transition, so creating one breaks nothing. You are adding a better door, not bricking up the old one.</li><li><b>“What about shared family accounts?”</b> The one genuinely awkward case. A passkey lives inside one person’s account, so for a streaming service the whole household shares, a password kept in a family password manager may stay the practical choice a while longer.</li></ol><div class="takeaways"><h2>The short version</h2><ul><li>A passkey replaces your password with your fingerprint, face or phone unlock — nothing to memorise.</li><li>Passkeys can&#39;t be phished: they only work on the real website they were made for.</li><li>They sync through your Google or Apple account, so a new phone isn&#39;t a lockout disaster.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/before-buying-a-new-gadget.webp" alt="Illustration of everyday gadgets — phone, earbuds, router, tablet and laptop — with checkmarks above them" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Gadgets</span><h3>Before buying a new gadget, check these 6 things (and save real money)</h3><p>Sun 1 Nov 2026 · 5 min read</p></div><a class="btn btn-amber" href="/before-buying-a-new-gadget/">Read next</a></div>
 <section class="more-cat"><h2>More in Security</h2><ul class="more-list"><li><a href="/how-to-spot-a-phishing-email/"><span>14 Nov 2026</span>How to spot a phishing email: 8 red flags before you click</a></li><li><a href="/stop-apps-tracking-you/"><span>12 Nov 2026</span>How to stop apps tracking you on your phone: the privacy settings to change today</a></li><li><a href="/public-wifi/"><span>11 Nov 2026</span>Is public Wi-Fi safe? 7 rules for coffee-shop and airport Wi-Fi</a></li><li><a href="/phone-hacked/"><span>10 Nov 2026</span>How to tell if your phone has been hacked: 9 warning signs and what to do next</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/secure-whatsapp-account/">← Newer: Secure WhatsApp account in 4 minutes: the settings scammers hope you skip</a><a href="/before-buying-a-new-gadget/">Older: Before buying a new gadget, check these 6 things (and save real money) →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>

@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Sun 8 Nov 2026</span><span class="sep"></span><span>5 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/where-to-place-wifi-router.webp" alt="Illustration of a house cross-section with a router on a high central shelf sending signal to every room" loading="lazy"><figcaption>Illustration: central, high and in the open — the three rules of router placement.</figcaption></figure>
 <p>Internet providers love selling faster packages to people whose real problem is a router stuffed in the worst possible spot. Wi-Fi is radio. It spreads outward from the router in all directions, weakens through every wall, and is blocked or absorbed by dense materials. Where the router sits decides how much of your speed ever reaches you. Everything below comes down to one decision: where to place Wi-Fi router so the signal you already pay for actually reaches the rooms where you sit, work and sleep.</p><h2>Where to place Wi-Fi router: the three placement rules</h2><ol><li><b>Central.</b> A router in the corner of the house sends half its signal outside. Move it as close to the middle of your home as the cable allows — even one room over can transform a dead spot.</li><li><b>High.</b> Wi-Fi radiates slightly downward, so a shelf or wall mount at head height or above covers a floor far better than the floor itself. Never leave the router on the ground.</li><li><b>In the open.</b> Not inside a cabinet, not behind the TV, not in a tangle of other electronics. A closed cupboard door alone can cut signal sharply.</li></ol><h2>The five worst neighbours for a router</h2><p>Keep the router away from: thick brick or concrete walls between it and where you sit; metal objects and filing cabinets; the microwave (it broadcasts interference on the same 2.4 GHz band); large mirrors; and water — fish tanks and even water heaters absorb Wi-Fi remarkably well. If your router currently lives next to three of these, you&#39;ve found your problem.</p><h2>Pick the right band</h2><p>Most routers broadcast two networks. 5 GHz is faster but fades quickly through walls — perfect for the same room or the next. 2.4 GHz is slower but travels much further — use it for bedrooms at the far end of the home and for smart-home gadgets. If your router merges both into one name, that&#39;s fine; devices choose automatically, though it sometimes chooses badly — splitting the names in your router settings lets you decide yourself.</p><h2>Test the new spot before you commit to it</h2><p>Do not commit to a shelf, cable clips and drilled holes on guesswork. Prop the router roughly where you plan to put it — a stack of books is fine for a day — then walk the house with your phone and run a free speed test in the three places you actually use Wi-Fi: your desk, the sofa and the bed. Write the numbers down. Then move the router a metre or two and test again; small moves surprise people, because a doorway or an open stretch of wall can matter more than a whole room of distance. In a two-storey home, the landing at the top of the stairs is often the single best spot in the house: high, central, and open to both floors at once.</p><h2>Three free things worth doing</h2><p>Restart the router once — genuinely, unplug it for 30 seconds. Routers are small computers and they accumulate glitches over months. Then check for a firmware update in the router&#39;s app or settings page; manufacturers fix speed and stability bugs there, and most routers never update themselves. Finally, run a speed test next to the router and then in your problem room. If the near-router speed is far below what you pay for, the problem is your provider or plan — not placement — and that&#39;s a phone call, not a purchase.</p><h2>When placement is not enough</h2><p>Some homes beat any single router: long flats, thick stone walls, three floors. Then the honest fixes are a mesh Wi-Fi kit — two or three units that hand the signal from room to room — or a cable. Running one Ethernet cable to a second access point near the problem rooms beats every wireless extender, and plug-in extenders are the last resort, because they typically halve the speed they repeat. Start with placement, because it is free. But if a perfect central spot still leaves a dead bedroom, that is the shape of the home talking, not your router failing — and mesh prices have fallen far enough that solving it properly now costs less than a year of the faster internet package your provider would love to sell you.</p><div class="takeaways"><h2>The short version</h2><ul><li>Wi-Fi spreads out and slightly down from the router — central and high beats corner and low.</li><li>Brick, concrete, metal and water (including fish tanks) are signal killers.</li><li>Use 2.4 GHz for distant rooms and 5 GHz for speed in the same room.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/how-to-spot-a-scam-text-message.webp" alt="Illustration of a shield with a padlock blocking scam message bubbles from a phone and laptop" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Security</span><h3>How to spot a scam text message in 10 seconds: the 5 tells</h3><p>Sat 7 Nov 2026 · 4 min read</p></div><a class="btn btn-amber" href="/how-to-spot-a-scam-text-message/">Read next</a></div>
 <section class="more-cat"><h2>More in Wi-Fi &amp; Internet</h2><ul class="more-list"><li><a href="/wifi-faster/"><span>10 Nov 2026</span>How to make WiFi faster without buying anything new</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/speed-up-slow-windows-laptop/">← Newer: How to speed up slow Windows laptop in 15 minutes — no new parts needed</a><a href="/how-to-spot-a-scam-text-message/">Older: How to spot a scam text message in 10 seconds: the 5 tells →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>

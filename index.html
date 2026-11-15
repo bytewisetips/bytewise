@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -478,6 +490,15 @@ a.read-link{text-decoration:none}
 <p style="margin:0">Try a shorter search, or browse “All”. Three new articles are added every day, so check back tomorrow.</p>
 </div>
 </section>
+<div class="wrap">
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
+</div>
 
   <section class="section wrap" id="plan" aria-label="Publishing schedule">
     <div class="section-head">
@@ -573,6 +594,11 @@ document.getElementById("searchInput").addEventListener("input", function(e){ st
 function showTip(){ document.getElementById("tipText").textContent = TIPS[state.tipIdx]; document.getElementById("tipCount").textContent = "Tip " + (state.tipIdx+1) + " of " + TIPS.length + " — three fresh articles lead the site every day."; }
 document.getElementById("tipNext").addEventListener("click", function(){ state.tipIdx = (state.tipIdx+1) % TIPS.length; showTip(); });
 showTip(); renderChips(); renderGrid();
+</script>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
 </script>
 </body>
 </html>

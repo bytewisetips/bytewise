@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Mon 9 Nov 2026</span><span class="sep"></span><span>7 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/speed-up-slow-windows-laptop.webp" alt="Illustration of a laptop on a tidy desk with a speedometer on its screen" loading="lazy"><figcaption>Illustration: most slowdowns are software clutter, not dying hardware.</figcaption></figure>
 <p>A laptop that was fine two years ago and now crawls usually isn&#39;t worn out. It&#39;s carrying two years of accumulated software: programs that launch themselves at startup, a nearly-full disk, and updates waiting in the background. This routine clears all of it in about 15 minutes. Follow it stage by stage and you will speed up slow Windows laptop performance noticeably — usually from the very first restart — before spending a single penny on parts.</p><h2>Minutes 0–4: stop programs launching themselves</h2><p>Press Ctrl + Shift + Esc to open Task Manager, then open the “Startup apps” tab. You&#39;ll see everything that launches when you sign in, with its startup impact rated. Disable anything you don&#39;t need the second you log in — game launchers, printer helpers, music apps, updaters. Keep your antivirus enabled. This one step is responsible for most “my laptop takes five minutes to start” complaints, and disabling a startup entry doesn&#39;t uninstall anything — the program still opens normally when you click it.</p><h2>Minutes 4–8: free up disk space</h2><p>Open Settings → System → Storage and turn on Storage Sense, then click “Temporary files” and clear what&#39;s safe: Windows Update cleanup, temporary files, and the Recycle Bin. A system drive that&#39;s over 90% full slows Windows down across the board, because it has nowhere to breathe. Aim to keep at least 15–20 GB free. Your Downloads folder is usually the biggest surprise — old installers and videos pile up there.</p><h2>Minutes 8–11: uninstall what you forgot you had</h2><p>Settings → Apps → Installed apps, sorted by size. Remove games you finished, trial software, and duplicate tools. Also check for the pre-installed extras many laptops ship with — if you&#39;ve never opened it in a year, it goes.</p><h2>Minutes 11–14: update, then actually restart</h2><p>Run Windows Update (Settings → Windows Update) and install what&#39;s waiting, then restart — a real Restart, not closing the lid. Many people go months on sleep cycles while updates queue up half-installed, and the machine drags the whole time. Restarting also clears memory completely, which sleep never does.</p><h2>Minute 15: check what&#39;s still eating resources</h2><p>Back in Task Manager&#39;s Processes tab, sort by CPU and then by Memory. In normal use, nothing should sit near the top constantly. If one program does — a browser with 40 tabs is the classic — that&#39;s your answer, not the laptop. Browsers deserve a special mention: closing unused tabs and removing extensions you don&#39;t recognise is often worth more than everything else on this list combined.</p><h2>More ways to speed up slow Windows laptop performance — still free</h2><p>If the 15 minutes helped but you want more, three deeper changes are worth your time. First, run a full scan with Windows Security (Virus &amp; threat protection → Scan options → Full scan): leftover adware bundled with old downloads is a common hidden cause of slowness, and the built-in scanner is genuinely good. Second, soften the visual effects: search Windows for “Adjust the appearance and performance of Windows” and either choose “Adjust for best performance” or switch off everything except font smoothing — older graphics hardware feels this immediately. Third, check OneDrive and other cloud sync tools in Task Manager. A laptop that spends its first ten minutes every morning syncing thousands of files will feel slow no matter what else you fix; set sync to start later, or pause it during your first working hour.</p><h2>When it really is the hardware</h2><p>If the laptop still crawls after all this, two upgrades transform genuinely old machines: replacing a spinning hard drive (HDD) with an SSD, and going from 4 GB to 8 GB of RAM. Both are far cheaper than a new laptop — but try the free 15 minutes first. Most machines never need step two.</p><h2>Keep it fast: the five-minute monthly routine</h2><p>Speed creeps away gradually, so a tiny routine keeps it away for good. Once a month: restart the laptop properly rather than sleeping it, run Storage Sense, and glance at the Startup apps list for anything new that quietly added itself — installers love doing this. Once every few months, open your browser extensions and remove anything you cannot name and explain. That is the whole habit. Five minutes a month is a fair trade for a laptop that still feels like the one you bought, and it stretches the machine’s useful life by years — which is, in the end, the cheapest upgrade of all.</p><div class="takeaways"><h2>The short version</h2><ul><li>Startup programs are the #1 cause of a laptop that takes forever to wake up.</li><li>If your disk is more than 90% full, everything slows down — free space first.</li><li>A laptop that&#39;s still slow after all five fixes is usually telling you its drive or RAM is the bottleneck.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/where-to-place-wifi-router.webp" alt="Illustration of a house cross-section with a router on a high central shelf sending signal to every room" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Wi-Fi &amp; Internet</span><h3>Where to place Wi-Fi router at home for faster Wi-Fi in every room</h3><p>Sun 8 Nov 2026 · 5 min read</p></div><a class="btn btn-amber" href="/where-to-place-wifi-router/">Read next</a></div>
 <section class="more-cat"><h2>More in Computers</h2><ul class="more-list"><li><a href="/computer-backup/"><span>11 Nov 2026</span>How to back up your computer so you never lose a file again</a></li><li><a href="/laptop-battery/"><span>10 Nov 2026</span>Laptop battery draining fast? 9 fixes to make it last all day</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/make-phone-battery-last-longer/">← Newer: How to make phone battery last longer: 9 settings that actually work</a><a href="/where-to-place-wifi-router/">Older: Where to place Wi-Fi router at home for faster Wi-Fi in every room →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>

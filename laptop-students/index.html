@@ -388,6 +388,18 @@ a.read-link{text-decoration:none}
 .prevnext a{color:var(--teal-dark);font-weight:700;text-decoration:none}.prevnext a:hover{text-decoration:underline}
 .cat-head{margin:26px 0 6px}.cat-head h1{font-size:clamp(1.7rem,4.5vw,2.4rem);font-weight:800;margin-bottom:8px}
 .cat-head p{color:var(--muted);font-size:1.05rem;margin:0 0 20px}
+.ask-box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:32px}
+.ask-box h2{font-size:1.3rem;margin:0 0 6px}
+.ask-box p{margin:0 0 12px;color:var(--muted)}
+.ask-box input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);margin-bottom:10px}
+.ask-btn{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:700;cursor:pointer;font:inherit}
+.ask-btn:hover{opacity:.9}
+.ask-note{font-size:.85rem;color:var(--muted);margin:10px 0 0}
+.helpful{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.helpful p{margin:0 0 10px;font-weight:700}
+.helpful button{margin-right:8px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;font-weight:600;font:inherit}
+.helpful button:disabled{opacity:.55;cursor:default}
+.helpful .thanks{margin:10px 0 0;color:var(--teal-dark);font-weight:600}
 </style>
 </head>
 <body>
@@ -417,6 +429,19 @@ a.read-link{text-decoration:none}
 <div class="meta-row"><span>Wed 11 Nov 2026</span><span class="sep"></span><span>7 min read</span><span class="sep"></span><span>By Noman</span></div>
 <figure><img src="/images/laptop-students.webp" alt="Illustration of a laptop with a full battery icon above it, a backpack on one side and a stack of books with a graduation cap on the other" loading="lazy"><figcaption>Illustration: RAM, battery and build quality decide whether a student laptop survives all four years.</figcaption></figure>
 <p>Walk into a laptop shop as a student and every machine claims to be the one. Ignore the claims. A student laptop lives or dies on three things: enough memory to stay fast for four years, a battery that survives a full day of lectures, and a build that survives being carried everywhere. Get those three right and the processor — the thing shops shout about loudest — barely matters.</p><h2>The best laptop for students starts with your course, not the spec sheet</h2><p>A laptop is a tool for your degree, so the degree decides what you need. If you are writing essays, reading PDFs and living in a browser, almost any modern laptop will cope. If you are editing video, running engineering software or training small machine-learning models, you need real power — and that is worth checking with your department before you buy. Ask a second-year student on your course what they actually use. Their answer is worth more than any review, because they have already discovered which specs matter and which ones just sound impressive in a shop.</p><h2>How much RAM and storage you actually need</h2><p>Memory is the one spec you cannot cheap out on. In 2026, 8 GB of RAM is the bare minimum, and it will feel slow by your second year as browsers and apps get heavier. Get 16 GB if you possibly can — it is the single upgrade that keeps a laptop feeling fast for four years. For storage, 256 GB fills up fast once you count lecture recordings, photos and a few big apps. Aim for 512 GB of solid-state storage, and check whether the drive can be upgraded later. A laptop with a replaceable drive can be rescued in year three for the price of a part, instead of the price of a new laptop.</p><h2>Battery life beats raw speed</h2><p>A laptop that dies at 2pm is useless in a library with no free sockets, however fast it is. Look for a claimed battery life of at least 10 hours, then assume you will get about two-thirds of that in real life — manufacturers test with the screen dimmed and nothing running. Real students get through a day with a battery rated at 12 hours or more. If you are choosing between a slightly faster chip and a bigger battery, take the battery every time. You will notice a dead laptop far more than you will notice a processor that is 10% quicker.</p><h2>Weight and build quality matter more than you think</h2><p>You will carry this laptop every day, in a bag, on buses, up stairs. A 2 kg laptop sounds fine in the shop and feels like a brick by November. Under 1.5 kg is the sweet spot. Also check the hinge and the keyboard before you buy: open and close the lid a few times, press the keys, and see whether the screen flexes. A flimsy laptop is a broken laptop waiting to happen, and a student budget rarely stretches to a second one. A spill-resistant keyboard and a solid metal or reinforced plastic body are worth more than a slightly bigger screen.</p><h2>What to spend: three honest budgets</h2><p>Under £400 gets you a solid Chromebook or a basic Windows laptop — fine for writing, browsing and video calls, but tight on storage and power. Between £500 and £800 is where the best laptop for students usually lives: 16 GB of RAM, a 512 GB drive and a screen you can read all day. Over £1,000 buys you premium build quality and power for demanding courses, but only spend it if your course genuinely needs it. And check for student discounts before you pay full price — most big brands offer 10% off with a student email, and last year&#39;s model is often £150 cheaper for nearly identical performance.</p><h2>Do not forget the warranty — and the backup</h2><p>A three-year accidental-damage warranty costs less than one screen repair, and students break screens. It is the least exciting purchase you will ever make and the one you will be most grateful for. Finally, whatever laptop you buy, set up a backup on day one: a cloud drive, an external drive, anything. A laptop can be replaced. Four years of essays cannot. The best laptop for students is the one that is still working, still fast enough and still holding your files when you hand in your final project.</p><div class="takeaways"><h2>The short version</h2><ul><li>Spend on 16 GB of RAM, a 512 GB solid-state drive and a decent battery — not on a processor you will never push.</li><li>Battery beats raw speed: look for a claimed 12 hours or more, and keep the whole laptop under 1.5 kg for daily carrying.</li><li>Between £500 and £800 is the sweet spot — and check student discounts and last year&#39;s model before paying full price.</li></ul></div>
+<div class="helpful" id="helpfulBox">
+<p>Was this guide helpful?</p>
+<button type="button" onclick="voteHelpful(true)">Yes, it helped</button>
+<button type="button" onclick="voteHelpful(false)">Not really</button>
+<p class="thanks" id="helpfulThanks" style="display:none">Thanks for your feedback! Got a question of your own? Ask us just below.</p>
+</div>
+<section class="ask-box" aria-label="Ask ByteWise a question">
+<h2>Got a tech question?</h2>
+<p>Tell us what is stuck — if we pick your question, we will answer it in a new guide.</p>
+<input type="text" id="askInput" placeholder="Type your question here…" aria-label="Your tech question">
+<button class="ask-btn" type="button" onclick="sendQuestion()">Send my question</button>
+<p class="ask-note">This opens your email app with your question ready to send to ByteWise.</p>
+</section>
 <div class="next-card"><img src="/images/computer-backup.webp" alt="Illustration of a laptop with a large circular backup arrow above it, an external hard drive plugged in and a cloud with a checkmark" loading="lazy"><div style="flex:1;min-width:200px"><span class="cat">Computers</span><h3>How to back up your computer so you never lose a file again</h3><p>Wed 11 Nov 2026 · 7 min read</p></div><a class="btn btn-amber" href="/computer-backup/">Read next</a></div>
 <section class="more-cat"><h2>More in Gadgets</h2><ul class="more-list"><li><a href="/best-cheap-tablet-2026/"><span>15 Nov 2026</span>Best cheap tablet 2026: the ones actually worth buying</a></li><li><a href="/airpods-vs-galaxy-buds/"><span>15 Nov 2026</span>AirPods vs Galaxy Buds: which earbuds should you buy in 2026?</a></li><li><a href="/black-friday-tech-deals-2026/"><span>14 Nov 2026</span>Black Friday tech deals 2026: how to spot a real bargain (and the traps to avoid)</a></li><li><a href="/best-budget-smartwatch-2026/"><span>14 Nov 2026</span>Best budget smartwatch 2026: the ones actually worth your money</a></li></ul></section>
 <nav class="prevnext" aria-label="Previous and next article"><a href="/stop-apps-tracking-you/">← Newer: How to stop apps tracking you on your phone: the privacy settings to change today</a><a href="/computer-backup/">Older: How to back up your computer so you never lose a file again →</a></nav>
@@ -431,5 +456,10 @@ a.read-link{text-decoration:none}
     </nav>
   </div>
 </footer>
+<script>
+function sendQuestion(){var q=document.getElementById("askInput").value.trim();if(!q){alert("Please type your question first.");return;}window.location.href="mailto:trykns.again@gmail.com?subject="+encodeURIComponent("ByteWise question")+"&body="+encodeURIComponent(q);}
+function voteHelpful(yes){var box=document.getElementById("helpfulBox");if(!box)return;var thanks=document.getElementById("helpfulThanks");if(thanks)thanks.style.display="block";var btns=box.querySelectorAll("button");for(var i=0;i<btns.length;i++){btns[i].disabled=true;}try{localStorage.setItem("bw-helpful-"+window.location.pathname,yes?"yes":"no");}catch(e){}}
+try{if(localStorage.getItem("bw-helpful-"+window.location.pathname)){var hb=document.getElementById("helpfulBox");if(hb){var th=document.getElementById("helpfulThanks");if(th)th.style.display="block";var bb=hb.querySelectorAll("button");for(var j=0;j<bb.length;j++){bb[j].disabled=true;}}}}catch(e){}
+</script>
 </body>
 </html>
